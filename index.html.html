@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyash Sandip Mirajgave | AI Creator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --accent-blue: #00d2ff;
+            --accent-purple: #a033ff;
+            --text-main: #ffffff;
+            --text-dim: #b0b0b0;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .logo { font-family: 'Orbitron', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a0033 0%, #050505 100%);
+            z-index: -2;
+        }
+
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo { color: var(--accent-blue); font-weight: bold; font-size: 1.2rem; }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(5,5,5,0.7), rgba(5,5,5,0.7)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-name {
+            font-size: clamp(2rem, 8vw, 4rem);
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Section Styling */
+        section { padding: 100px 10%; }
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            transition: 0.4s;
+        }
+        .glass-card:hover { border-color: var(--accent-blue); transform: translateY(-10px); }
+
+        /* Images */
+        .img-container {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--glass-border);
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .glass-card:hover img { transform: scale(1.1); }
+
+        .profile-img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            border: 2px solid var(--accent-blue);
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+        }
+
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+
+        /* Skills */
+        .skill-item { margin-bottom: 1.5rem; }
+        .progress-bg { background: rgba(255,255,255,0.1); height: 8px; border-radius: 10px; overflow: hidden; margin-top: 8px;}
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple)); width: 0; transition: 1.5s ease-out; }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 768px) {
+            .about-flex { flex-direction: column; text-align: center; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <nav>
+        <div class="logo">SSM.AI</div>
+        <div style="color: var(--text-dim); font-size: 0.8rem;">PORTFOLIO 2026</div>
+    </nav>
+
+    <header id="hero">
+        <h1 class="hero-name">Suyash Sandip Mirajgave</h1>
+        <p style="color: var(--text-dim); margin: 1rem 0 2rem;">AI Creator | Student | Tech Enthusiast</p>
+        <a href="#contact" class="cta-btn" style="border: 1px solid var(--accent-blue); padding: 10px 25px; border-radius: 50px; text-decoration: none; color: var(--accent-blue);">Contact Me</a>
+    </header>
+
+    <section id="about" class="reveal">
+        <div style="display: flex; gap: 40px; align-items: center;" class="about-flex">
+            <div style="flex: 1;">
+                <img src="profile.jpg" alt="Suyash Sandip Mirajgave" class="profile-img" onerror="this.src='https://via.placeholder.com/400x500/111/00d2ff?text=Your+Photo+Here'">
+            </div>
+            <div style="flex: 1.5;">
+                <h2 style="color: var(--accent-blue); margin-bottom: 1rem;">System Profile</h2>
+                <p>I am Suyash Sandip Mirajgave, a student and AI creator from Pune, India. I am passionate about artificial intelligence, automation, and technology. I enjoy building AI projects and learning new technologies.</p>
+                <p style="margin-top: 10px; color: var(--text-dim);">I create digital content and explore innovative tools that help people work smarter.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Operational Projects</h2>
+        <div class="grid-3">
+            <div class="glass-card">
+                <div class="img-container">
+                    <img src="project1.jpg" alt="Seat Belt Alarm" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500'">
+                </div>
+                <h3 style="color: var(--accent-blue);">Seat Belt Alarm System</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Electronic project reminding drivers to fasten seat belts using a buzzer and LED.</p>
+                <p style="font-size: 0.8rem; color: var(--accent-purple); margin-top: 5px;">Tools: Breadboard, Jumper Wires, LED, Buzzer</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="img-container">
+                    <img src="project2.jpg" alt="AI Influencer Automation" onerror="this.src='https://images.unsplash.com/photo-1675271591211-126ad94e495d?q=80&w=500'">
+                </div>
+                <h3 style="color: var(--accent-blue);">AI Influencer Automation</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Tutorial explaining how to create AI influencer automation videos for social media.</p>
+                <p style="font-size: 0.8rem; color: var(--accent-purple); margin-top: 5px;">Tools: AI Tools, Video Editing SW</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Skill Matrix</h2>
+        <div class="grid-3">
+            <div class="glass-card">
+                <h3 style="margin-bottom: 20px;">Technical</h3>
+                <div class="skill-item">
+                    <span>AI Tools</span>
+                    <div class="progress-bg"><div class="progress-fill" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Video Editing</span>
+                    <div class="progress-bg"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Python Basics</span>
+                    <div class="progress-bg"><div class="progress-fill" style="width: 70%;"></div></div>
+                </div>
+            </div>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 20px;">Soft Skills</h3>
+                <ul style="list-style: none; color: var(--text-dim);">
+                    <li style="margin-bottom: 10px;">⚡ Communication</li>
+                    <li style="margin-bottom: 10px;">⚡ Problem Solving</li>
+                    <li style="margin-bottom: 10px;">⚡ Consistency</li>
+                    <li style="margin-bottom: 10px;">⚡ Creativity</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal" style="text-align: center;">
+        <div class="glass-card" style="max-width: 600px; margin: auto;">
+            <h2 style="color: var(--accent-blue);">Establish Contact</h2>
+            <p style="margin: 20px 0;">Pune, Maharashtra, India</p>
+            <a href="mailto:suyashmirajgave@gmail.com" style="color: var(--accent-purple); text-decoration: none; font-weight: bold; font-size: 1.2rem;">suyashmirajgave@gmail.com</a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--glass-border); color: #444;">
+        &copy; 2026 Suyash Sandip Mirajgave | AI Innovation Lab
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
